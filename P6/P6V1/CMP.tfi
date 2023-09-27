@@ -1,0 +1,20 @@
+
+
+
+// Instantiate the module
+CMP instance_name (
+    .SrcA(SrcA), 
+    .SrcB(SrcB), 
+    .Imm16(Imm16), 
+    .Zero(Zero), 
+    .GZ(GZ), 
+    .LZ(LZ), 
+    .GS(GS), 
+    .LS(LS), 
+    .GU(GU), 
+    .LU(LU), 
+    .GIS(GIS), 
+    .LIS(LIS)
+    );
+
+

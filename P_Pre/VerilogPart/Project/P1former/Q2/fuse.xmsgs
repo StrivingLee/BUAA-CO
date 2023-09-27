@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"D:/Xilinx/Project/P1former/Q2/awful_fsm.v" Line 21: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"D:/Xilinx/Project/P1former/Q2/awful_fsm.v" Line 22: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"D:/Xilinx/Project/P1former/Q2/awful_fsm.v" Line 23: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"D:/Xilinx/Project/P1former/Q2/awful_fsm.v" Line 24: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"D:/Xilinx/Project/P1former/Q2/awful_fsm.v" Line 25: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"D:/Xilinx/Project/P1former/Q2/awful_fsm.v" Line 26: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"D:/Xilinx/Project/P1former/Q2/awful_fsm.v" Line 27: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"D:/Xilinx/Project/P1former/Q2/awful_fsm.v" Line 28: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1591" delta="unknown" >"D:/Xilinx/Project/P1former/Q2/awful_fsm.v" Line 29: Root scope declaration is not allowed in verilog 95/2K mode
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"D:/Xilinx/Project/P1former/Q2/awful_fsm.v" Line 47: &lt;<arg fmt="%s" index="1">busyCount</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"D:/Xilinx/Project/P1former/Q2/awful_fsm.v" Line 67: &lt;<arg fmt="%s" index="1">busyCount</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"D:/Xilinx/Project/P1former/Q2/awful_fsm.v" Line 69: &lt;<arg fmt="%s" index="1">busyCount</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"D:/Xilinx/Project/P1former/Q2/awful_fsm.v" Line 71: &lt;<arg fmt="%s" index="1">busyCount</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"D:/Xilinx/Project/P1former/Q2/awful_fsm.v" Line 83: &lt;<arg fmt="%s" index="1">busyCount</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="598" delta="unknown" >"D:/Xilinx/Project/P1former/Q2/awful_fsm.v" Line 31: Module &lt;<arg fmt="%s" index="1">awful_fsm</arg>&gt; ignored due to previous errors.
+</msg>
+
+</messages>
+

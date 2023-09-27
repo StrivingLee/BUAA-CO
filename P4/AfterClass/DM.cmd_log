@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj P4 -o D:/Programing/ComputerOrganization/P4/DM.tfi -lib work D:/Programing/ComputerOrganization/P4//DM.v -module DM -template D:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

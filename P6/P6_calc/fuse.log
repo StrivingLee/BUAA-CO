@@ -1,0 +1,49 @@
+Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/Programing/ComputerOrganization/P6/P6_calc/mips_txt_isim_beh.exe -prj D:/Programing/ComputerOrganization/P6/P6_calc/mips_txt_beh.prj work.mips_txt work.glbl 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 16
+Turning on mult-threading, number of parallel sub-compilation jobs: 32 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P6/P6_calc/W_REG.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P6/P6_calc/NPC.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P6/P6_calc/M_REG.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P6/P6_calc/MDU.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P6/P6_calc/IFU.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P6/P6_calc/GRF.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P6/P6_calc/E_REG.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P6/P6_calc/EXT.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P6/P6_calc/D_REG.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P6/P6_calc/Controller.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P6/P6_calc/CMP.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P6/P6_calc/ALU.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P6/P6_calc/mips.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P6/P6_calc/mips_tb.v" into library work
+Analyzing Verilog file "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P6/P6_calc/mips.v" Line 196: Port shamt is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P6/P6_calc/mips.v" Line 227: Port slt is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P6/P6_calc/mips.v" Line 301: Port Imm16 is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P6/P6_calc/mips.v" Line 367: Port shamt is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P6/P6_calc/mips.v" Line 404: Port shamt is not connected to this instance
+Completed static elaboration
+Fuse Memory Usage: 160796 KB
+Fuse CPU Usage: 234 ms
+Compiling module IFU
+Compiling module D_REG
+Compiling module Controller
+Compiling module CMP
+Compiling module NPC
+Compiling module GRF
+Compiling module EXT
+Compiling module E_REG
+Compiling module MDU
+Compiling module ALU
+Compiling module M_REG
+Compiling module W_REG
+Compiling module mips
+Compiling module mips_txt
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 15 Verilog Units
+Built simulation executable D:/Programing/ComputerOrganization/P6/P6_calc/mips_txt_isim_beh.exe
+Fuse Memory Usage: 171028 KB
+Fuse CPU Usage: 374 ms

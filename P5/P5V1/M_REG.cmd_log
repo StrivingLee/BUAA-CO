@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj P5V1 -o D:/Programing/ComputerOrganization/P5/P5V1/M_REG.tfi -lib work D:/Programing/ComputerOrganization/P5/P5V1//M_REG.v -module M_REG -template D:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

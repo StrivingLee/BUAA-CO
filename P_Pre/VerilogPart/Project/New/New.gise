@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="New.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="a1_tb_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1665239831" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1665239831">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1665239831" xil_pn:in_ck="150907175386024417" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1665239831">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="a1.v"/>
+      <outfile xil_pn:name="a1_tb.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1665239747" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="662196019082103806" xil_pn:start_ts="1665239747">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1665239747" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-5630268202653098052" xil_pn:start_ts="1665239747">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1665239747" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="442189589850516914" xil_pn:start_ts="1665239747">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1665239834" xil_pn:in_ck="150907175386024417" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1665239834">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="a1.v"/>
+      <outfile xil_pn:name="a1_tb.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1665239835" xil_pn:in_ck="150907175386024417" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6922382974054087611" xil_pn:start_ts="1665239834">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+  </transforms>
+
+</generated_project>

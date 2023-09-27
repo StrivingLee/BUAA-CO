@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"D:\Programing\ComputerOrganization\P4\mips.v" Line 155: Port <arg fmt="%s" index="1">in5</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"D:\Programing\ComputerOrganization\P4\mips.v" Line 156: Port <arg fmt="%s" index="1">in3</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1670" delta="new" >"D:\Programing\ComputerOrganization\P4\IFU.v" Line 17: Signal &lt;<arg fmt="%s" index="1">ROM</arg>&gt; in initial block is partially initialized.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\Programing\ComputerOrganization\P4\mips.v" Line 121: Assignment to <arg fmt="%s" index="1">GreatZero</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\Programing\ComputerOrganization\P4\mips.v" Line 122: Assignment to <arg fmt="%s" index="1">LessZero</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"D:\Programing\ComputerOrganization\P4\mips.v" Line 127: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">EXTControl</arg>&gt;. Formal port size is <arg fmt="%d" index="2">2</arg>-bit while actual signal size is <arg fmt="%d" index="1">3</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"D:\Programing\ComputerOrganization\P4\mips.v" Line 49: Net &lt;<arg fmt="%s" index="1">GreaterZero</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="552" delta="new" >"D:\Programing\ComputerOrganization\P4\mips.v" Line 155: Input port <arg fmt="%s" index="1">in5[31]</arg> is not connected on this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="552" delta="new" >"D:\Programing\ComputerOrganization\P4\mips.v" Line 156: Input port <arg fmt="%s" index="1">in3[4]</arg> is not connected on this instance
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Programing\ComputerOrganization\P4\mips.v</arg>&quot; line <arg fmt="%d" index="2">81</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">MyIFU</arg>&gt; of block &lt;<arg fmt="%s" index="4">IFU</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Programing\ComputerOrganization\P4\mips.v</arg>&quot; line <arg fmt="%d" index="2">88</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">MyController</arg>&gt; of block &lt;<arg fmt="%s" index="4">Controller</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Programing\ComputerOrganization\P4\mips.v</arg>&quot; line <arg fmt="%d" index="2">103</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">MyGRF</arg>&gt; of block &lt;<arg fmt="%s" index="4">GRF</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Programing\ComputerOrganization\P4\mips.v</arg>&quot; line <arg fmt="%d" index="2">115</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">MyALU</arg>&gt; of block &lt;<arg fmt="%s" index="4">ALU</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Programing\ComputerOrganization\P4\mips.v</arg>&quot; line <arg fmt="%d" index="2">125</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">MyEXT</arg>&gt; of block &lt;<arg fmt="%s" index="4">EXT</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Programing\ComputerOrganization\P4\mips.v</arg>&quot; line <arg fmt="%d" index="2">130</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">MyDM</arg>&gt; of block &lt;<arg fmt="%s" index="4">DM</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Programing\ComputerOrganization\P4\mips.v</arg>&quot; line <arg fmt="%d" index="2">141</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">MyNPC</arg>&gt; of block &lt;<arg fmt="%s" index="4">NPC</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Programing\ComputerOrganization\P4\mips.v</arg>&quot; line <arg fmt="%d" index="2">155</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">RegDataMUX</arg>&gt; of block &lt;<arg fmt="%s" index="4">MUX_8_32</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Programing\ComputerOrganization\P4\mips.v</arg>&quot; line <arg fmt="%d" index="2">156</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">RegAddrMUX</arg>&gt; of block &lt;<arg fmt="%s" index="4">MUX_4_5</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Programing\ComputerOrganization\P4\mips.v</arg>&quot; line <arg fmt="%d" index="2">157</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">SrcBMUX</arg>&gt; of block &lt;<arg fmt="%s" index="4">MUX_2_32</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="new" >Port &apos;<arg fmt="%s" index="1">in5</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">RegDataMUX</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="new" >Port &apos;<arg fmt="%s" index="1">in6</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">RegDataMUX</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="new" >Port &apos;<arg fmt="%s" index="1">in7</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">RegDataMUX</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="new" >Port &apos;<arg fmt="%s" index="1">in3</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">RegAddrMUX</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Programing\ComputerOrganization\P4\mips.v</arg>&quot; line <arg fmt="%s" index="2">115</arg>: Output port &lt;<arg fmt="%s" index="3">GreatZero</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">MyALU</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Programing\ComputerOrganization\P4\mips.v</arg>&quot; line <arg fmt="%s" index="2">115</arg>: Output port &lt;<arg fmt="%s" index="3">LessZero</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">MyALU</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">GreaterZero</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+</messages>
+

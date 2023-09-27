@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/Programing/ComputerOrganization/P5/jwx/mips_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="mips_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="18" />
+   <wvobject fp_name="/mips_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/Dinstr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Dinstr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Dinstr[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/StallFlag" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">StallFlag</obj_property>
+      <obj_property name="ObjectShortName">StallFlag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/EForwardFrom" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">EForwardFrom[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EForwardFrom[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/MForwardFrom" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">MForwardFrom[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MForwardFrom[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/WForwardFrom" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">WForwardFrom[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WForwardFrom[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/DForwardToRs" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">DForwardToRs[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DForwardToRs[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/DForwardToRt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">DForwardToRt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DForwardToRt[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/EForwardToRs" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">EForwardToRs[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EForwardToRs[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/EForwardToRt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">EForwardToRt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EForwardToRt[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/MWD" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">MWD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MWD[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/D_GRF/PC" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/D_CTRL/rt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rt[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rt[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/DBranch" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">DBranch</obj_property>
+      <obj_property name="ObjectShortName">DBranch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/E_CTRL/A3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">A3[4:0]</obj_property>
+      <obj_property name="ObjectShortName">A3[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/M_CTRL/A3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">A3[4:0]</obj_property>
+      <obj_property name="ObjectShortName">A3[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/W_CTRL/A3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">A3[4:0]</obj_property>
+      <obj_property name="ObjectShortName">A3[4:0]</obj_property>
+   </wvobject>
+</wave_config>

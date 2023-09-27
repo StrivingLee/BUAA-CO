@@ -1,0 +1,28 @@
+ISim log file
+Running: D:\Programing\ComputerOrganization\P5\zzy\mips_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/Programing/ComputerOrganization/P5/zzy/mips_tb_isim_beh.wdb 
+ISim P.20131013 (signature 0x8ef4fb42)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+                 190@00003000: $28 <= 00000000
+                 210@00003004: $29 <= 00000000
+                 230@00003008: $ 1 <= 00001010
+                 250@0000300c: $ 2 <= 87230000
+                 270@00003010: $ 3 <= 00007856
+                 290@00003014: $ 4 <= 85ff0000
+                 310@00003018: $ 5 <= 00000001
+                 330@0000301c: $ 6 <= ffff0000
+                 350@00003020: $ 7 <= 0000ffff
+                 530@0000304c: $ 2 <= 0000000c
+                 610@0000305c: $31 <= 00003064
+                 610@00003060: *0000000c <= 00001010
+                 690@00003078: *0000000c <= 00003064
+                 730@0000307c: $ 1 <= 00003064
+                 810@00003090: *0000000c <= 00003064

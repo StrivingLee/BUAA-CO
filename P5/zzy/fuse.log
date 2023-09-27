@@ -1,0 +1,54 @@
+Running: D:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/Programing/ComputerOrganization/P5/zzy/mips_tb_isim_beh.exe -prj D:/Programing/ComputerOrganization/P5/zzy/mips_tb_beh.prj work.mips_tb work.glbl 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 16
+Turning on mult-threading, number of parallel sub-compilation jobs: 32 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/zzy/W_REG.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/zzy/NPC.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/zzy/M_REG.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/zzy/MUX.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/zzy/IFU.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/zzy/GRF.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/zzy/E_REG.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/zzy/EXT.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/zzy/D_REG.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/zzy/DM.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/zzy/CU.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/zzy/CMP.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/zzy/ALU.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/zzy/mips.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/zzy/mips_tb.v" into library work
+Analyzing Verilog file "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P5/zzy/mips.v" Line 101: Port in3 is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P5/zzy/mips.v" Line 187: Port in3 is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P5/zzy/mips.v" Line 215: Port in3 is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P5/zzy/mips.v" Line 225: Port in3 is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P5/zzy/mips.v" Line 310: Port in4 is not connected to this instance
+Completed static elaboration
+Fuse Memory Usage: 160280 KB
+Fuse CPU Usage: 234 ms
+Compiling module IFU
+Compiling module D_REG
+Compiling module MUX_4_32
+Compiling module MUX_2_32
+Compiling module GRF
+Compiling module CMP
+Compiling module NPC
+Compiling module EXT
+Compiling module MUX_4_5
+Compiling module E_REG
+Compiling module ALU
+Compiling module M_REG
+Compiling module DM
+Compiling module W_REG
+Compiling module MUX_8_32
+Compiling module CU
+Compiling module mips
+Compiling module mips_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 19 Verilog Units
+Built simulation executable D:/Programing/ComputerOrganization/P5/zzy/mips_tb_isim_beh.exe
+Fuse Memory Usage: 173008 KB
+Fuse CPU Usage: 437 ms

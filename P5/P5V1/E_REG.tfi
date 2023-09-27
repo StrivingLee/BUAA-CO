@@ -1,0 +1,21 @@
+
+
+
+// Instantiate the module
+E_REG instance_name (
+    .clk(clk), 
+    .reset(reset), 
+    .clr(clr), 
+    .D_PC(D_PC), 
+    .D_WD1(D_WD1), 
+    .D_WD2(D_WD2), 
+    .D_RegAddr(D_RegAddr), 
+    .D_EXTResult(D_EXTResult), 
+    .E_PC(E_PC), 
+    .E_WD1(E_WD1), 
+    .E_WD2(E_WD2), 
+    .E_RegAddr(E_RegAddr), 
+    .E_EXTResult(E_EXTResult)
+    );
+
+

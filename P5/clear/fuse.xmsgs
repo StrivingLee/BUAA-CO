@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/ComputerOrganization/P5/clear/mips.v" Line 122: Port <arg fmt="%s" index="1">rd_addr</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/ComputerOrganization/P5/clear/mips.v" Line 193: Port <arg fmt="%s" index="1">rd_addr</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/ComputerOrganization/P5/clear/mips.v" Line 247: Port <arg fmt="%s" index="1">rs_addr</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/ComputerOrganization/P5/clear/mips.v" Line 291: Port <arg fmt="%s" index="1">rs_addr</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/ComputerOrganization/P5/clear/SU.v" Line 34: Port <arg fmt="%s" index="1">rd_addr</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/ComputerOrganization/P5/clear/SU.v" Line 58: Port <arg fmt="%s" index="1">rs_addr</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/ComputerOrganization/P5/clear/SU.v" Line 74: Port <arg fmt="%s" index="1">rs_addr</arg> is not connected to this instance
+</msg>
+
+</messages>
+

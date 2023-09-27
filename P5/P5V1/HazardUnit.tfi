@@ -1,0 +1,14 @@
+
+
+
+// Instantiate the module
+HazardUnit instance_name (
+    .D_Instr(D_Instr), 
+    .E_Instr(E_Instr), 
+    .M_Instr(M_Instr), 
+    .W_Instr(W_Instr), 
+    .en(en), 
+    .clr(clr)
+    );
+
+

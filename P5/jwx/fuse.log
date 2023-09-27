@@ -1,0 +1,44 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/Programing/ComputerOrganization/P5/jwx/mips_tb_isim_beh.exe" -prj "D:/Programing/ComputerOrganization/P5/jwx/mips_tb_beh.prj" "work.mips_tb" "work.glbl" 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 16
+Turning on mult-threading, number of parallel sub-compilation jobs: 32 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/jwx/M_REG_W.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/jwx/M_DM.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/jwx/F_REG_D.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/jwx/F_IFU.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/jwx/E_REG_M.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/jwx/E_ALU.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/jwx/D_REG_E.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/jwx/D_GRF.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/jwx/D_EXT.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/jwx/CTRL.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/jwx/mips.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/jwx/mips_tb.v" into library work
+Analyzing Verilog file "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P5/jwx/mips.v" Line 118: Port rd is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P5/jwx/mips.v" Line 196: Port rd is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P5/jwx/mips.v" Line 255: Port rs is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P5/jwx/mips.v" Line 305: Port rs is not connected to this instance
+Completed static elaboration
+Fuse Memory Usage: 159768 KB
+Fuse CPU Usage: 218 ms
+Compiling module F_IFU
+Compiling module F_REG_D
+Compiling module CTRL
+Compiling module D_EXT
+Compiling module D_GRF
+Compiling module D_REG_E
+Compiling module E_ALU
+Compiling module E_REG_M
+Compiling module M_DM
+Compiling module M_REG_W
+Compiling module mips
+Compiling module mips_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 13 Verilog Units
+Built simulation executable D:/Programing/ComputerOrganization/P5/jwx/mips_tb_isim_beh.exe
+Fuse Memory Usage: 170220 KB
+Fuse CPU Usage: 296 ms

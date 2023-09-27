@@ -1,0 +1,50 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/Programing/ComputerOrganization/P5/P5_bioal_new/mips_tb_isim_beh.exe" -prj "D:/Programing/ComputerOrganization/P5/P5_bioal_new/mips_tb_beh.prj" "work.mips_tb" "work.glbl" 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 16
+Turning on mult-threading, number of parallel sub-compilation jobs: 32 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/P5_bioal_new/W_REG.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/P5_bioal_new/NPC.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/P5_bioal_new/M_REG.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/P5_bioal_new/IFU.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/P5_bioal_new/GRF.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/P5_bioal_new/E_REG.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/P5_bioal_new/EXT.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/P5_bioal_new/D_REG.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/P5_bioal_new/DM.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/P5_bioal_new/Controller.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/P5_bioal_new/CMP.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/P5_bioal_new/ALU.v" into library work
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/P5_bioal_new/mips.v" into library work
+WARNING:HDLCompiler:35 - "D:/Programing/ComputerOrganization/P5/P5_bioal_new/mips.v" Line 389: <en> is already implicitly declared earlier.
+Analyzing Verilog file "D:/Programing/ComputerOrganization/P5/P5_bioal_new/mips_tb.v" into library work
+Analyzing Verilog file "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P5/P5_bioal_new/mips.v" Line 153: Port shamt is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P5/P5_bioal_new/mips.v" Line 245: Port Imm16 is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P5/P5_bioal_new/mips.v" Line 290: Port shamt is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P5/P5_bioal_new/mips.v" Line 308: Port MemRead is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/ComputerOrganization/P5/P5_bioal_new/mips.v" Line 341: Port shamt is not connected to this instance
+Completed static elaboration
+Fuse Memory Usage: 159768 KB
+Fuse CPU Usage: 312 ms
+Compiling module IFU
+Compiling module D_REG
+Compiling module Controller
+Compiling module CMP
+Compiling module NPC
+Compiling module GRF
+Compiling module EXT
+Compiling module E_REG
+Compiling module ALU
+Compiling module M_REG
+Compiling module DM
+Compiling module W_REG
+Compiling module mips
+Compiling module mips_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 15 Verilog Units
+Built simulation executable D:/Programing/ComputerOrganization/P5/P5_bioal_new/mips_tb_isim_beh.exe
+Fuse Memory Usage: 170220 KB
+Fuse CPU Usage: 578 ms

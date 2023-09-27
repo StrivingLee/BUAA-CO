@@ -1,0 +1,71 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to D:/Programing/ComputerOrganization/P5/P5V6/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to D:/Programing/ComputerOrganization/P5/P5V6/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: Controller.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" into library work
+Parsing module <Controller>.
+ERROR:HDLCompiler:661 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 5: Non-net port Instr cannot be of mode input
+ERROR:HDLCompiler:329 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 34: Target <rs> of concurrent assignment or output port connection should be a net type.
+ERROR:HDLCompiler:329 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 35: Target <rt> of concurrent assignment or output port connection should be a net type.
+ERROR:HDLCompiler:329 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 36: Target <rd> of concurrent assignment or output port connection should be a net type.
+ERROR:HDLCompiler:329 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 37: Target <shamt> of concurrent assignment or output port connection should be a net type.
+ERROR:HDLCompiler:329 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 39: Target <Imm16> of concurrent assignment or output port connection should be a net type.
+ERROR:HDLCompiler:329 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 40: Target <Imm26> of concurrent assignment or output port connection should be a net type.
+ERROR:HDLCompiler:69 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 42: <R> is not declared.
+ERROR:HDLCompiler:69 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 43: <add> is not declared.
+ERROR:HDLCompiler:69 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 44: <sub> is not declared.
+ERROR:HDLCompiler:69 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 45: <isXor> is not declared.
+ERROR:HDLCompiler:329 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 46: Target <jr> of concurrent assignment or output port connection should be a net type.
+ERROR:HDLCompiler:69 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 46: <R> is not declared.
+ERROR:HDLCompiler:69 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 47: <jalr> is not declared.
+ERROR:HDLCompiler:69 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 48: <sll> is not declared.
+ERROR:HDLCompiler:69 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 49: <ori> is not declared.
+ERROR:HDLCompiler:69 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 50: <lw> is not declared.
+ERROR:HDLCompiler:69 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 51: <sw> is not declared.
+ERROR:HDLCompiler:329 - "D:\Programing\ComputerOrganization\P5\P5V6\Controller.v" Line 52: Target <beq> of concurrent assignment or output port connection should be a net type.
+Sorry, too many errors..
+--> 
+
+Total memory usage is 188540 kilobytes
+
+Number of errors   :   19 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

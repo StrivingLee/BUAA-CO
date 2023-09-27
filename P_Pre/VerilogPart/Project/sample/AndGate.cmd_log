@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/Xilinx/Project/sample/AndGate.xst" -ofn "D:/Xilinx/Project/sample/AndGate.syr" 

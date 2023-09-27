@@ -1,0 +1,17 @@
+ori $at, $zero, 1
+ori $v0, $zero, 4
+ori $a2, $zero, 6
+beq $v1, $a2, 0x44
+sw  $v0, ($zero)
+lw  $v1, ($zero)
+add $a0, $at, $v1
+sub $at, $a0, $v1
+jal 0x3030
+lw  $a1, ($zero)
+ori $ra, $zero, 0x300c
+add $v1, $v1, $at
+beq $a1, $v1, 0x2c
+nop 
+sw  $v1, 4($zero)
+jr  $ra
+nop

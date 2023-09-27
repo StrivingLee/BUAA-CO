@@ -1,0 +1,18 @@
+
+
+
+// Instantiate the module
+DM instance_name (
+    .clk(clk), 
+    .reset(reset), 
+    .MemWrite(MemWrite), 
+    .MemRead(MemRead), 
+    .ReadOffset(ReadOffset), 
+    .PC(PC), 
+    .MemAddr(MemAddr), 
+    .MemData(MemData), 
+    .MemReadData(MemReadData), 
+    .ReadByteData(ReadByteData)
+    );
+
+
