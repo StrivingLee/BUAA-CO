@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj P4_bnezalc -o D:/Programing/ComputerOrganization/P4_bnezalc/NPC.tfi -lib work D:/Programing/ComputerOrganization/P4_bnezalc//NPC.v -module NPC -template D:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
