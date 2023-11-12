@@ -39,9 +39,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1699077569" xil_pn:in_ck="-3498988834189876907" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1699077569">
+    <transform xil_pn:end_ts="1699763651" xil_pn:in_ck="-3498988834189876907" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1699763651">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="Controller.v"/>
       <outfile xil_pn:name="DM.v"/>
@@ -53,11 +57,11 @@
       <outfile xil_pn:name="mips.v"/>
       <outfile xil_pn:name="mips_tb.v"/>
     </transform>
-    <transform xil_pn:end_ts="1699077569" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6247470219262508485" xil_pn:start_ts="1699077569">
+    <transform xil_pn:end_ts="1699763750" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6247470219262508485" xil_pn:start_ts="1699763750">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1699077569" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5378974865421778819" xil_pn:start_ts="1699077569">
+    <transform xil_pn:end_ts="1699763750" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5378974865421778819" xil_pn:start_ts="1699763750">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -65,9 +69,14 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1699077569" xil_pn:in_ck="-3498988834189876907" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1699077569">
+    <transform xil_pn:end_ts="1699763651" xil_pn:in_ck="-3498988834189876907" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1699763651">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="Controller.v"/>
       <outfile xil_pn:name="DM.v"/>
@@ -79,9 +88,14 @@
       <outfile xil_pn:name="mips.v"/>
       <outfile xil_pn:name="mips_tb.v"/>
     </transform>
-    <transform xil_pn:end_ts="1699077571" xil_pn:in_ck="-3498988834189876907" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-240764822206452471" xil_pn:start_ts="1699077569">
+    <transform xil_pn:end_ts="1699763752" xil_pn:in_ck="-3498988834189876907" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-240764822206452471" xil_pn:start_ts="1699763750">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
@@ -89,9 +103,12 @@
       <outfile xil_pn:name="mips_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1699077571" xil_pn:in_ck="6539534605580987909" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="581557907265077740" xil_pn:start_ts="1699077571">
+    <transform xil_pn:end_ts="1699763753" xil_pn:in_ck="6539534605580987909" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="581557907265077740" xil_pn:start_ts="1699763752">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="mips_tb_isim_beh.wdb"/>

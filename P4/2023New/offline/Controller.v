@@ -13,7 +13,9 @@ module Controller(
     output [1:0] RegDst,
     output [2:0] NPCControl,
     output Beq,
-    output Bgtz
+    output Bgtz,
+    output Bgezal,
+    output [1:0] DMControl
 );
 
     assign R = (opcode == 6'b000000) ? 1'b1 : 1'b0;
@@ -25,40 +27,55 @@ module Controller(
     assign sll = R & (funct == 6'b000000) ? 1'b1 : 1'b0;
     assign ori = (opcode == 6'b001101);
     assign lw = (opcode == 6'b100011);
+    assign lb = (opcode == 6'b100000);
+    assign lh = (opcode == 6'b100001);
     assign sw = (opcode == 6'b101011);
+    assign sb = (opcode == 6'b101000);
+    assign sh = (opcode == 6'b101001);
     assign beq = (opcode == 6'b000100);
     assign lui = (opcode == 6'b001111);
     assign jal = (opcode == 6'b000011);
     assign j = (opcode == 6'b000010);
-    assign lb = (opcode == 6'b100000);
+    /* Extended Instructions */
+    // Branch
     assign bgtz = (opcode == 6'b000111);
+    assign bgezal = (opcode == 6'b000001);
+    // Immediate
     assign addi = (opcode == 6'b001000);
+
+    assign load = lb | lh | lw;
+    assign store = sb | sh | sw;
+    assign branch = beq | bgtz | bgezal;
+    assign link = jal | jalr | bgezal;
 
     assign ALUControl = (sub) ? 3'b001 :
                         (isXor) ? 3'b010 :
                         (ori) ? 3'b011 :
                         (sll) ? 3'b100 :
-                        3'b000;
-    assign MemRead = lw | lb;
-    assign MemWrite = sw;
-    assign RegWrite = add | sub | ori | lw | lui | jal | jalr | sll | lb | addi | isXor;
-    assign Mem2Reg = (lw) ? 3'b001 :
+                        3'b000; // add
+    assign MemRead = load;
+    assign MemWrite = store;
+    assign RegWrite = add | sub | ori | load | lui | link | sll | addi | isXor;
+    assign Mem2Reg = (load) ? 3'b001 :
                      (lui) ? 3'b010 :
-                     (jal | jalr) ? 3'b011 :
-                     (lb) ? 3'b100 :
+                     (link) ? 3'b011 : // PC+4
                      3'b000;
-    assign EXTControl = (lw | sw | beq | lb | addi | bgtz) ? 3'b001 :
+    assign EXTControl = (load | store | branch | addi) ? 3'b001 :
                         (lui) ? 3'b010 :
                         3'b000;
-    assign ALUSrc = (ori | lw | sw | lui | lb | addi);
+    assign ALUSrc = (ori | load | store | lui | addi);
     assign RegDst = (add | sub | jalr | sll | isXor) ? 2'b01 : // rd
-                    (jal) ? 2'b10 : // $ra
+                    (jal | bgezal) ? 2'b10 : // $ra
                     2'b00;
-    assign NPCControl = (beq | bgtz) ? 3'b001 :
-                        (j | jal) ? 3'b010:
-                        (jr | jalr) ? 3'b100:
+    assign NPCControl = (branch) ? 3'b001 : // branch, 16imm
+                        (j | jal) ? 3'b010: // j, 26imm
+                        (jr | jalr) ? 3'b100: // rs
                         3'b000;
     assign Beq = beq;
     assign Bgtz = bgtz;
+    assign Bgezal = bgezal;
+    assign DMControl = (sh | lh) ? 2'b01 : // load or store half
+                       (sb | lb) ? 2'b10 : // load or store byte
+                       2'b00; // load or store word
 
 endmodule

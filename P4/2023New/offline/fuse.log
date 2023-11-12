@@ -1,4 +1,4 @@
-Running: C:\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/Programing/BUAA-CO/P4/2023New/offline/mips_tb_isim_beh.exe -prj D:/Programing/BUAA-CO/P4/2023New/offline/mips_tb_beh.prj work.mips_tb work.glbl 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/Programing/BUAA-CO/P4/2023New/offline/mips_tb_isim_beh.exe" -prj "D:/Programing/BUAA-CO/P4/2023New/offline/mips_tb_beh.prj" "work.mips_tb" "work.glbl" 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 16
 Turning on mult-threading, number of parallel sub-compilation jobs: 32 
@@ -15,8 +15,8 @@ Analyzing Verilog file "D:/Programing/BUAA-CO/P4/2023New/offline/mips.v" into li
 Analyzing Verilog file "D:/Programing/BUAA-CO/P4/2023New/offline/mips_tb.v" into library work
 Analyzing Verilog file "C:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P4/2023New/offline/mips.v" Line 155: Port in5 is not connected to this instance
-WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P4/2023New/offline/mips.v" Line 156: Port in3 is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P4/2023New/offline/mips.v" Line 170: Port in4 is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P4/2023New/offline/mips.v" Line 172: Port in3 is not connected to this instance
 Completed static elaboration
 Compiling module IFU
 Compiling module Controller
@@ -26,13 +26,14 @@ Compiling module EXT
 Compiling module DM
 Compiling module NPC
 Compiling module MUX_8_32
+Compiling module MUX_2_5
 Compiling module MUX_4_5
 Compiling module MUX_2_32
 Compiling module mips
 Compiling module mips_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 13 Verilog Units
+Compiled 14 Verilog Units
 Built simulation executable D:/Programing/BUAA-CO/P4/2023New/offline/mips_tb_isim_beh.exe
-Fuse Memory Usage: 30060 KB
-Fuse CPU Usage: 436 ms
+Fuse Memory Usage: 30020 KB
+Fuse CPU Usage: 374 ms

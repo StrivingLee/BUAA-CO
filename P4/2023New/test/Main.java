@@ -3,6 +3,8 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Main {
+    public static final int DEBUG = 0;
+
     public static void main(String[] args) {
         String filePath = "testfile.txt";
         int lineNumber = 0;
@@ -13,21 +15,23 @@ public class Main {
                 if (line.equals("v2.0 raw")) {
                     continue;
                 }
-                lineNumber++;
                 int instruction = 0;
                 // line = "0x" + line;
+                int temp = Integer.parseInt("8c010004", 16);
+                System.out.println(temp);
                 if (line.matches("[0-9A-Fa-f]+")) {
-                    System.out.println("line match: " + line);
                     instruction = Integer.parseInt(line, 16);
+                    System.out.println("line match: " + line);
                     System.out.println(instruction);
                 } else {
                     System.out.println("Invalid hexadecimal string: " + line);
                 }
-                int opcode = (instruction & 0xFC000000) >>> 26; // 31:26;
 
                 int addr = 0x00003000 + lineNumber * 4;
+                lineNumber++;
                 String addrSt = Integer.toHexString(addr).toUpperCase();
 
+                int opcode = (instruction & 0xFC000000) >>> 26; // 31:26;
                 int s = (instruction & 0x3E00000) >>> 21;
                 int t = (instruction & 0x1F0000) >>> 16;
                 int d = (instruction & 0xF800) >>> 11;

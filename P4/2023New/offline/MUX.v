@@ -14,6 +14,21 @@ module MUX_2_32(
 	end
 endmodule
 
+module MUX_2_5(
+	input [4:0] in0,
+	input [4:0] in1,
+	input sel,
+	output reg [4:0] out
+    );
+    
+	always@(*) begin
+		case(sel)
+			2'b00: out = in0;
+			2'b01: out = in1;
+		endcase
+	end
+endmodule
+
 module MUX_4_5(
 	input [4:0] in0,
 	input [4:0] in1,

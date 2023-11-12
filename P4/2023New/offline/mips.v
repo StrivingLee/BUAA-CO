@@ -1,9 +1,9 @@
 `timescale 1ns / 1ps
+
 module mips(
     input clk,
     input reset
 );
-
 
     // The wire IFU needs
     wire [31:0] NPC;
@@ -32,10 +32,14 @@ module mips(
     wire [2:0] NPCControl;
     wire Beq;
     wire Bgtz;
+    wire Bgezal;
+    wire [1:0] DMControl;
 
     // The wire GRF needs
     wire [4:0] A1;
     wire [4:0] A2;
+    wire LinkRegDst;
+    wire [4:0] LinkRegAddr;
     wire [4:0] RegAddr;
     wire [31:0] RegData;
     wire [31:0] RD1;
@@ -53,13 +57,13 @@ module mips(
     wire [31:0] MemAddr;
     wire [31:0] MemData;
     wire [31:0] MemReadData;
-    wire [31:0] ReadByteData;
     
     // The wire EXT needs
     wire [31:0] EXTImm32;
     
     // The wire NPC needs
     wire [31:0] PC4;
+
 
     // Splitter
     assign opcode = Instr[31:26];
@@ -71,12 +75,17 @@ module mips(
     assign Imm16 = Instr[15:0];
     assign Imm26 = Instr[25:0];
 
+    // DM
     // assign A1 = rs;
     // assign A2 = rt;
     assign SrcA = RD1;
     // assign SrcB = RD2;
     assign MemAddr = Result;
     assign MemData = RD2;
+
+    // GRF
+    assign LinkRegDst = Bgezal & LessZero;
+
 
     IFU MyIFU (
         .clk(clk), 
@@ -98,7 +107,9 @@ module mips(
         .RegDst(RegDst), 
         .NPCControl(NPCControl),
         .Beq(Beq),
-        .Bgtz(Bgtz)
+        .Bgtz(Bgtz),
+        .Bgezal(Bgezal),
+        .DMControl(DMControl)
     );
     GRF MyGRF (
         .clk(clk), 
@@ -113,6 +124,8 @@ module mips(
         .RD2(RD2)
     );
     ALU MyALU (
+        .rs(rs),
+        .rt(rt),
         .SrcA(SrcA), 
         .SrcB(SrcB), 
         .ALUControl(ALUControl), 
@@ -132,18 +145,20 @@ module mips(
         .reset(reset), 
         .MemWrite(MemWrite), 
         .MemRead(MemRead), 
+        .DMControl(DMControl), 
         .PC(PC), 
         .MemAddr(MemAddr), 
         .MemData(MemData), 
-        .MemReadData(MemReadData), 
-        .ReadByteData(ReadByteData)
+        .MemReadData(MemReadData)
     );
     NPC MyNPC (
         .NPCControl(NPCControl), 
         .Zero(Zero), 
         .GreaterZero(GreaterZero), 
+        .LessZero(LessZero),  
         .Beq(Beq), 
         .Bgtz(Bgtz), 
+        .Bgezal(Bgezal), 
         .PC(PC), 
         .Imm26(Imm26), 
         .EXTImm32(EXTImm32), 
@@ -152,8 +167,9 @@ module mips(
         .PC4(PC4)
     );
 
-    MUX_8_32 RegDataMUX(.in0(Result), .in1(MemReadData), .in2(EXTImm32), .in3(PC4), .in4(ReadByteData), .sel(Mem2Reg), .out(RegData));
-    MUX_4_5 RegAddrMUX(.in0(rt), .in1(rd), .in2(5'b11111), .sel(RegDst), .out(RegAddr));
+    MUX_8_32 RegDataMUX(.in0(Result), .in1(MemReadData), .in2(EXTImm32), .in3(PC4), .sel(Mem2Reg), .out(RegData));
+    MUX_2_5 LinkRegAddrMUX(.in0(5'b11111), .in1(5'b0), .sel(LinkRegDst), .out(LinkRegAddr));
+    MUX_4_5 RegAddrMUX(.in0(rt), .in1(rd), .in2(LinkRegAddr), .sel(RegDst), .out(RegAddr));
     MUX_2_32 SrcBMUX(.in0(RD2), .in1(EXTImm32), .sel(ALUSrc), .out(SrcB));
 
 

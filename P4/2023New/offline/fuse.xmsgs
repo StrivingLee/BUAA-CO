@@ -5,10 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/BUAA-CO/P4/2023New/offline/mips.v" Line 155: Port <arg fmt="%s" index="1">in5</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/BUAA-CO/P4/2023New/offline/mips.v" Line 170: Port <arg fmt="%s" index="1">in4</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/BUAA-CO/P4/2023New/offline/mips.v" Line 156: Port <arg fmt="%s" index="1">in3</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/BUAA-CO/P4/2023New/offline/mips.v" Line 172: Port <arg fmt="%s" index="1">in3</arg> is not connected to this instance
 </msg>
 
 </messages>
