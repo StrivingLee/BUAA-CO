@@ -19,11 +19,11 @@ Analyzing Verilog file "D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" into li
 Analyzing Verilog file "D:/Programing/BUAA-CO/P6/2023New/offline/mips_tb.v" into library work
 Analyzing Verilog file "C:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 208: Port shamt is not connected to this instance
-WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 240: Port slt is not connected to this instance
-WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 321: Port Imm16 is not connected to this instance
-WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 391: Port shamt is not connected to this instance
-WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 432: Port shamt is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 212: Port shamt is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 245: Port slt is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 328: Port Imm16 is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 400: Port shamt is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 446: Port shamt is not connected to this instance
 Completed static elaboration
 Compiling module IFU
 Compiling module D_REG
@@ -43,5 +43,5 @@ Compiling module glbl
 Time Resolution for simulation is 1ps.
 Compiled 15 Verilog Units
 Built simulation executable D:/Programing/BUAA-CO/P6/2023New/offline/mips_txt_isim_beh.exe
-Fuse Memory Usage: 32792 KB
-Fuse CPU Usage: 577 ms
+Fuse Memory Usage: 32776 KB
+Fuse CPU Usage: 702 ms

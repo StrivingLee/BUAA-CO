@@ -10,7 +10,7 @@
 /*  \___\/\___\                                                    */
 /***********************************************************************/
 
-/* This file is designed for use with ISim build 0x8ef4fb42 */
+/* This file is designed for use with ISim build 0x7708f090 */
 
 #define XSI_HIDE_SYMBOL_SPEC true
 #include "xsi.h"
@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Programing/ComputerOrganization/P6/P6_blink/NPC.v";
+static const char *ng0 = "D:/Programing/BUAA-CO/P6/2022/P6_blink/NPC.v";
 static unsigned int ng1[] = {1U, 0U};
 static int ng2[] = {4, 0};
 static unsigned int ng3[] = {0U, 0U};
@@ -631,7 +631,7 @@ static void Cont_21_0(char *t0)
     char *t598;
     char *t599;
 
-LAB0:    t1 = (t0 + 2456U);
+LAB0:    t1 = (t0 + 4288U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
@@ -639,7 +639,7 @@ LAB0:    t1 = (t0 + 2456U);
 LAB3:    goto *t2;
 
 LAB2:    xsi_set_current_line(21, ng0);
-    t2 = (t0 + 876U);
+    t2 = (t0 + 1528U);
     t5 = *((char **)t2);
     t2 = ((char*)((ng1)));
     memset(t6, 0, 8);
@@ -722,14 +722,14 @@ LAB35:    if (*((unsigned int *)t4) > 0)
 
 LAB37:    memcpy(t3, t135, 8);
 
-LAB38:    t594 = (t0 + 2696);
-    t595 = (t594 + 32U);
+LAB38:    t594 = (t0 + 4688);
+    t595 = (t594 + 56U);
     t596 = *((char **)t595);
-    t597 = (t596 + 40U);
+    t597 = (t596 + 56U);
     t598 = *((char **)t597);
     memcpy(t598, t3, 8);
     xsi_driver_vfirst_trans(t594, 0, 31);
-    t599 = (t0 + 2652);
+    t599 = (t0 + 4608);
     *((int *)t599) = 1;
 
 LAB1:    return;
@@ -746,7 +746,7 @@ LAB10:    t29 = (t22 + 4);
     *((unsigned int *)t29) = 1;
     goto LAB11;
 
-LAB12:    t34 = (t0 + 600U);
+LAB12:    t34 = (t0 + 1048U);
     t35 = *((char **)t34);
     t34 = ((char*)((ng1)));
     memset(t36, 0, 8);
@@ -852,13 +852,13 @@ LAB28:    t98 = (t4 + 4);
     *((unsigned int *)t98) = 1;
     goto LAB29;
 
-LAB30:    t103 = (t0 + 1520U);
+LAB30:    t103 = (t0 + 2648U);
     t104 = *((char **)t103);
     t103 = ((char*)((ng2)));
     memset(t105, 0, 8);
     xsi_vlog_unsigned_add(t105, 32, t104, 32, t103, 32);
     t107 = ((char*)((ng3)));
-    t109 = (t0 + 1612U);
+    t109 = (t0 + 2808U);
     t110 = *((char **)t109);
     memset(t108, 0, 8);
     t109 = (t108 + 4);
@@ -874,7 +874,7 @@ LAB30:    t103 = (t0 + 1520U);
     t117 = *((unsigned int *)t109);
     *((unsigned int *)t109) = (t117 & 65535U);
     t119 = ((char*)((ng4)));
-    t120 = (t0 + 1612U);
+    t120 = (t0 + 2808U);
     t121 = *((char **)t120);
     memset(t122, 0, 8);
     t120 = (t122 + 4);
@@ -893,7 +893,7 @@ LAB30:    t103 = (t0 + 1520U);
     xsi_vlog_unsigned_add(t130, 32, t105, 32, t106, 32);
     goto LAB31;
 
-LAB32:    t137 = (t0 + 968U);
+LAB32:    t137 = (t0 + 1688U);
     t138 = *((char **)t137);
     t137 = ((char*)((ng1)));
     memset(t139, 0, 8);
@@ -997,7 +997,7 @@ LAB45:    t162 = (t155 + 4);
     *((unsigned int *)t162) = 1;
     goto LAB46;
 
-LAB47:    t167 = (t0 + 600U);
+LAB47:    t167 = (t0 + 1048U);
     t168 = *((char **)t167);
     t167 = ((char*)((ng3)));
     memset(t169, 0, 8);
@@ -1103,13 +1103,13 @@ LAB63:    t231 = (t136 + 4);
     *((unsigned int *)t231) = 1;
     goto LAB64;
 
-LAB65:    t236 = (t0 + 1520U);
+LAB65:    t236 = (t0 + 2648U);
     t237 = *((char **)t236);
     t236 = ((char*)((ng2)));
     memset(t238, 0, 8);
     xsi_vlog_unsigned_add(t238, 32, t237, 32, t236, 32);
     t240 = ((char*)((ng3)));
-    t242 = (t0 + 1612U);
+    t242 = (t0 + 2808U);
     t243 = *((char **)t242);
     memset(t241, 0, 8);
     t242 = (t241 + 4);
@@ -1125,7 +1125,7 @@ LAB65:    t236 = (t0 + 1520U);
     t250 = *((unsigned int *)t242);
     *((unsigned int *)t242) = (t250 & 65535U);
     t252 = ((char*)((ng4)));
-    t253 = (t0 + 1612U);
+    t253 = (t0 + 2808U);
     t254 = *((char **)t253);
     memset(t255, 0, 8);
     t253 = (t255 + 4);
@@ -1144,7 +1144,7 @@ LAB65:    t236 = (t0 + 1520U);
     xsi_vlog_unsigned_add(t263, 32, t238, 32, t239, 32);
     goto LAB66;
 
-LAB67:    t270 = (t0 + 1060U);
+LAB67:    t270 = (t0 + 1848U);
     t271 = *((char **)t270);
     t270 = ((char*)((ng1)));
     memset(t272, 0, 8);
@@ -1248,7 +1248,7 @@ LAB80:    t295 = (t288 + 4);
     *((unsigned int *)t295) = 1;
     goto LAB81;
 
-LAB82:    t300 = (t0 + 692U);
+LAB82:    t300 = (t0 + 1208U);
     t301 = *((char **)t300);
     t300 = ((char*)((ng1)));
     memset(t302, 0, 8);
@@ -1354,13 +1354,13 @@ LAB98:    t364 = (t269 + 4);
     *((unsigned int *)t364) = 1;
     goto LAB99;
 
-LAB100:    t369 = (t0 + 1520U);
+LAB100:    t369 = (t0 + 2648U);
     t370 = *((char **)t369);
     t369 = ((char*)((ng2)));
     memset(t371, 0, 8);
     xsi_vlog_unsigned_add(t371, 32, t370, 32, t369, 32);
     t373 = ((char*)((ng3)));
-    t375 = (t0 + 1612U);
+    t375 = (t0 + 2808U);
     t376 = *((char **)t375);
     memset(t374, 0, 8);
     t375 = (t374 + 4);
@@ -1376,7 +1376,7 @@ LAB100:    t369 = (t0 + 1520U);
     t383 = *((unsigned int *)t375);
     *((unsigned int *)t375) = (t383 & 65535U);
     t385 = ((char*)((ng4)));
-    t386 = (t0 + 1612U);
+    t386 = (t0 + 2808U);
     t387 = *((char **)t386);
     memset(t388, 0, 8);
     t386 = (t388 + 4);
@@ -1395,7 +1395,7 @@ LAB100:    t369 = (t0 + 1520U);
     xsi_vlog_unsigned_add(t396, 32, t371, 32, t372, 32);
     goto LAB101;
 
-LAB102:    t403 = (t0 + 1152U);
+LAB102:    t403 = (t0 + 2008U);
     t404 = *((char **)t403);
     t403 = ((char*)((ng1)));
     memset(t405, 0, 8);
@@ -1499,7 +1499,7 @@ LAB115:    t428 = (t421 + 4);
     *((unsigned int *)t428) = 1;
     goto LAB116;
 
-LAB117:    t433 = (t0 + 784U);
+LAB117:    t433 = (t0 + 1368U);
     t434 = *((char **)t433);
     t433 = ((char*)((ng1)));
     memset(t435, 0, 8);
@@ -1605,11 +1605,11 @@ LAB133:    t497 = (t402 + 4);
     *((unsigned int *)t497) = 1;
     goto LAB134;
 
-LAB135:    t502 = (t0 + 1704U);
+LAB135:    t502 = (t0 + 2968U);
     t503 = *((char **)t502);
     goto LAB136;
 
-LAB137:    t502 = (t0 + 1244U);
+LAB137:    t502 = (t0 + 2168U);
     t510 = *((char **)t502);
     t502 = ((char*)((ng1)));
     memset(t511, 0, 8);
@@ -1692,9 +1692,9 @@ LAB150:    t533 = (t509 + 4);
     goto LAB151;
 
 LAB152:    t539 = ((char*)((ng3)));
-    t540 = (t0 + 1612U);
+    t540 = (t0 + 2808U);
     t541 = *((char **)t540);
-    t540 = (t0 + 1520U);
+    t540 = (t0 + 2648U);
     t543 = *((char **)t540);
     memset(t542, 0, 8);
     t540 = (t542 + 4);
@@ -1712,7 +1712,7 @@ LAB152:    t539 = ((char*)((ng3)));
     xsi_vlogtype_concat(t538, 32, 32, 3U, t542, 4, t541, 26, t539, 2);
     goto LAB153;
 
-LAB154:    t557 = (t0 + 1336U);
+LAB154:    t557 = (t0 + 2328U);
     t558 = *((char **)t557);
     t557 = ((char*)((ng1)));
     memset(t559, 0, 8);
@@ -1794,11 +1794,11 @@ LAB167:    t581 = (t556 + 4);
     *((unsigned int *)t581) = 1;
     goto LAB168;
 
-LAB169:    t586 = (t0 + 1704U);
+LAB169:    t586 = (t0 + 2968U);
     t587 = *((char **)t586);
     goto LAB170;
 
-LAB171:    t586 = (t0 + 1428U);
+LAB171:    t586 = (t0 + 2488U);
     t592 = *((char **)t586);
     t586 = ((char*)((ng2)));
     memset(t593, 0, 8);

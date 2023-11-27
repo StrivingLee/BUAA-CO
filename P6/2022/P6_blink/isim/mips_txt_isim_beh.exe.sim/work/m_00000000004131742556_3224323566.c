@@ -10,7 +10,7 @@
 /*  \___\/\___\                                                    */
 /***********************************************************************/
 
-/* This file is designed for use with ISim build 0x8ef4fb42 */
+/* This file is designed for use with ISim build 0x7708f090 */
 
 #define XSI_HIDE_SYMBOL_SPEC true
 #include "xsi.h"
@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Programing/ComputerOrganization/P6/P6_blink/IFU.v";
+static const char *ng0 = "D:/Programing/BUAA-CO/P6/2022/P6_blink/IFU.v";
 static unsigned int ng1[] = {12288U, 0U};
 
 
@@ -41,7 +41,7 @@ static void Always_10_0(char *t0)
     char *t11;
     char *t12;
 
-LAB0:    t1 = (t0 + 1628U);
+LAB0:    t1 = (t0 + 2848U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
@@ -49,9 +49,9 @@ LAB0:    t1 = (t0 + 1628U);
 LAB3:    goto *t2;
 
 LAB2:    xsi_set_current_line(10, ng0);
-    t2 = (t0 + 1824);
+    t2 = (t0 + 3168);
     *((int *)t2) = 1;
-    t3 = (t0 + 1656);
+    t3 = (t0 + 2880);
     *((char **)t3) = t2;
     *((char **)t1) = &&LAB4;
 
@@ -59,7 +59,7 @@ LAB1:    return;
 LAB4:    xsi_set_current_line(10, ng0);
 
 LAB5:    xsi_set_current_line(11, ng0);
-    t4 = (t0 + 692U);
+    t4 = (t0 + 1208U);
     t5 = *((char **)t4);
     t4 = (t5 + 4);
     t6 = *((unsigned int *)t4);
@@ -71,7 +71,7 @@ LAB5:    xsi_set_current_line(11, ng0);
         goto LAB6;
 
 LAB7:    xsi_set_current_line(12, ng0);
-    t2 = (t0 + 784U);
+    t2 = (t0 + 1368U);
     t3 = *((char **)t2);
     t2 = (t3 + 4);
     t6 = *((unsigned int *)t2);
@@ -88,14 +88,14 @@ LAB8:    goto LAB2;
 
 LAB6:    xsi_set_current_line(11, ng0);
     t11 = ((char*)((ng1)));
-    t12 = (t0 + 1104);
+    t12 = (t0 + 1928);
     xsi_vlogvar_wait_assign_value(t12, t11, 0, 0, 32, 0LL);
     goto LAB8;
 
 LAB9:    xsi_set_current_line(12, ng0);
-    t4 = (t0 + 876U);
+    t4 = (t0 + 1528U);
     t5 = *((char **)t4);
-    t4 = (t0 + 1104);
+    t4 = (t0 + 1928);
     xsi_vlogvar_wait_assign_value(t4, t5, 0, 0, 32, 0LL);
     goto LAB11;
 

@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj offline -o D:/Programing/BUAA-CO/P7/2023New/offline/mips_cpu.tfi -lib work D:/Programing/BUAA-CO/P7/2023New/offline//mips_cpu.v -module mips_cpu -template C:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

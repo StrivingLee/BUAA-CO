@@ -10,7 +10,7 @@
 /*  \___\/\___\                                                    */
 /***********************************************************************/
 
-/* This file is designed for use with ISim build 0x8ef4fb42 */
+/* This file is designed for use with ISim build 0x7708f090 */
 
 #define XSI_HIDE_SYMBOL_SPEC true
 #include "xsi.h"
@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Programing/ComputerOrganization/P6/P6_blink/EXT.v";
+static const char *ng0 = "D:/Programing/BUAA-CO/P6/2022/P6_blink/EXT.v";
 static unsigned int ng1[] = {0U, 0U};
 static unsigned int ng2[] = {1U, 0U};
 static int ng3[] = {16, 0};
@@ -165,7 +165,7 @@ static void Cont_7_0(char *t0)
     char *t132;
     char *t133;
 
-LAB0:    t1 = (t0 + 1444U);
+LAB0:    t1 = (t0 + 2528U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
@@ -173,7 +173,7 @@ LAB0:    t1 = (t0 + 1444U);
 LAB3:    goto *t2;
 
 LAB2:    xsi_set_current_line(7, ng0);
-    t2 = (t0 + 692U);
+    t2 = (t0 + 1208U);
     t5 = *((char **)t2);
     t2 = ((char*)((ng1)));
     memset(t6, 0, 8);
@@ -234,14 +234,14 @@ LAB17:    if (*((unsigned int *)t4) > 0)
 
 LAB19:    memcpy(t3, t40, 8);
 
-LAB20:    t128 = (t0 + 1684);
-    t129 = (t128 + 32U);
+LAB20:    t128 = (t0 + 2928);
+    t129 = (t128 + 56U);
     t130 = *((char **)t129);
-    t131 = (t130 + 40U);
+    t131 = (t130 + 56U);
     t132 = *((char **)t131);
     memcpy(t132, t3, 8);
     xsi_driver_vfirst_trans(t128, 0, 31);
-    t133 = (t0 + 1640);
+    t133 = (t0 + 2848);
     *((int *)t133) = 1;
 
 LAB1:    return;
@@ -258,13 +258,13 @@ LAB10:    t28 = (t4 + 4);
     *((unsigned int *)t28) = 1;
     goto LAB11;
 
-LAB12:    t34 = (t0 + 600U);
+LAB12:    t34 = (t0 + 1048U);
     t35 = *((char **)t34);
     t34 = ((char*)((ng1)));
     xsi_vlogtype_concat(t33, 32, 32, 2U, t34, 16, t35, 16);
     goto LAB13;
 
-LAB14:    t42 = (t0 + 692U);
+LAB14:    t42 = (t0 + 1208U);
     t43 = *((char **)t42);
     t42 = ((char*)((ng2)));
     memset(t44, 0, 8);
@@ -346,10 +346,10 @@ LAB27:    t66 = (t41 + 4);
     *((unsigned int *)t66) = 1;
     goto LAB28;
 
-LAB29:    t72 = (t0 + 600U);
+LAB29:    t72 = (t0 + 1048U);
     t73 = *((char **)t72);
     t72 = ((char*)((ng3)));
-    t75 = (t0 + 600U);
+    t75 = (t0 + 1048U);
     t76 = *((char **)t75);
     memset(t77, 0, 8);
     t75 = (t77 + 4);
@@ -366,7 +366,7 @@ LAB29:    t72 = (t0 + 600U);
     xsi_vlogtype_concat(t71, 32, 32, 2U, t74, 16, t73, 16);
     goto LAB30;
 
-LAB31:    t91 = (t0 + 692U);
+LAB31:    t91 = (t0 + 1208U);
     t92 = *((char **)t91);
     t91 = ((char*)((ng4)));
     memset(t93, 0, 8);
@@ -449,7 +449,7 @@ LAB44:    t115 = (t90 + 4);
     goto LAB45;
 
 LAB46:    t121 = ((char*)((ng1)));
-    t122 = (t0 + 600U);
+    t122 = (t0 + 1048U);
     t123 = *((char **)t122);
     xsi_vlogtype_concat(t120, 32, 32, 2U, t123, 16, t121, 16);
     goto LAB47;

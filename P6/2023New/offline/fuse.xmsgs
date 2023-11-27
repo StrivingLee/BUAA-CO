@@ -5,19 +5,19 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 208: Port <arg fmt="%s" index="1">shamt</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 212: Port <arg fmt="%s" index="1">shamt</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 240: Port <arg fmt="%s" index="1">slt</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 245: Port <arg fmt="%s" index="1">slt</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 321: Port <arg fmt="%s" index="1">Imm16</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 328: Port <arg fmt="%s" index="1">Imm16</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 391: Port <arg fmt="%s" index="1">shamt</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 400: Port <arg fmt="%s" index="1">shamt</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 432: Port <arg fmt="%s" index="1">shamt</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/Programing/BUAA-CO/P6/2023New/offline/mips.v" Line 446: Port <arg fmt="%s" index="1">shamt</arg> is not connected to this instance
 </msg>
 
 </messages>

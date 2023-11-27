@@ -26,13 +26,18 @@ module Controller(
     output bne,
     output bgtz,
     
-    output bezal,
+    // todo branch
+    output newbal,
     
     output jal, 
     output jr,
     output slt,
     output sltu,
 	output load,
+
+    // todo load
+    output newload,
+
 	output store,
 	output lui,
     output md,
@@ -63,7 +68,7 @@ module Controller(
     assign mflo = R & (funct == 6'b010010);
     assign mthi = R & (funct == 6'b010001);
     assign mtlo = R & (funct == 6'b010011);
-    // todo
+    // todo mdu
     assign madd = (opcode == 6'b011100) & (funct == 6'b000000);
     assign maddu = (opcode == 6'b011100) & (funct == 6'b000001);
     assign msub = (opcode == 6'b011100) & (funct == 6'b000100);
@@ -94,9 +99,10 @@ module Controller(
     assign bgtz = (opcode == 6'b000111);
     assign addi = (opcode == 6'b001000);
     
-    
-    assign bezal = R & (funct == 6'b110001);
-    // assign bezal = (opcode == 6'b101100);
+    // todo branch
+    assign newbal = 1'b0;
+    // todo load
+    assign newload = 1'b0;
     
 
     assign ALUControl = (sub) ? `SUB :
@@ -108,10 +114,12 @@ module Controller(
                         (sltu) ? `SLTU : 
                         `ADD;
     assign MemWrite = sb | sh | sw;
-    assign RegWrite = calc_r | calc_i | load | lui | md | mf | mt | set | jal | jalr | bezal;
+    // todo branch
+    assign RegWrite = calc_r | calc_i | load | lui | md | mf | mt | set | jal | jalr | newbal;
     assign Mem2Reg = (load) ? `DM :
                      (lui) ? `EXT :
-                     (jal | jalr | bezal) ? `PC :
+                     // todo branch
+                     (jal | jalr | newbal) ? `PC :
                      (mfhi) ? `HI :
                      (mflo) ? `LO :
                      `ALU;
@@ -121,7 +129,8 @@ module Controller(
     assign ALUSrc = (calc_r | md) ? 1'b0 : 1'b1;
     assign RegAddr = (calc_r | mf | jalr) ? rd :
                      (calc_i | sltu | load | lui) ? rt : 
-                     (jal | bezal) ? 5'b11111 :
+                     // todo branch
+                     (jal | newbal) ? 5'b11111 :
                      5'b0;
     assign MDUControl = mult  ? `MULT :
 	                    multu ? `MULTU :
@@ -131,7 +140,7 @@ module Controller(
                         mflo  ? `MFLO :
                         mthi  ? `MTHI :
               			mtlo  ? `MTLO :
-                        // todo
+                        // todo mdu
                         madd  ? `MADD :
                         maddu ? `MADDU:
                         msub  ? `MSUB:
@@ -141,16 +150,18 @@ module Controller(
                       (sh) ? `HALF :
                       (sb) ? `BYTE : 
                       4'd0;
-    assign LControl = (lw) ? `WORD : 
+    // todo load, no matter word, half or byte, there must be added
+    assign LControl = (lw | newload) ? `WORD : 
                       (lh) ? `HALF :
                       (lb) ? `BYTE : 
                       4'd0;
     assign calc_r = add | sub | isAnd | isOr | isXor | sll | slt | sltu;
 	assign calc_i = andi | ori | xori | addi;
-	assign load = lb | lh | lw;
+    // todo load
+	assign load = lb | lh | lw | newload;
 	assign store = sb | sh | sw;
     assign set = slt | sltu;
-    // todo
+    // todo mdu
     assign md = mult | multu | div | divu | madd | maddu | msub | msubu;
     assign mf = mfhi | mflo;
     assign mt = mthi | mtlo;

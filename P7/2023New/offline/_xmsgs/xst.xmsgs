@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="872" delta="new" >"D:\Programing\BUAA-CO\P7\2023New\offline\tb_norm_demo.v" Line 56: Using initial value of <arg fmt="%s" index="1">reset</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1670" delta="new" >"D:\Programing\BUAA-CO\P7\2023New\offline\tb_norm_demo.v" Line 75: Signal &lt;<arg fmt="%s" index="1">inst</arg>&gt; in initial block is partially initialized.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="532" delta="new" >"D:\Programing\BUAA-CO\P7\2023New\offline\tb_norm_demo.v" Line 76: Index &lt;<arg fmt="%d" index="1">4096</arg>&gt; is out of range [<arg fmt="%d" index="2">0</arg>:<arg fmt="%d" index="3">4095</arg>] for signal &lt;<arg fmt="%s" index="4">data</arg>&gt;.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"D:\Programing\BUAA-CO\P7\2023New\offline\tb_norm_demo.v" Line 3: Empty module &lt;<arg fmt="%s" index="1">mips_txt</arg>&gt; remains a black box.
+</msg>
+
+</messages>
+

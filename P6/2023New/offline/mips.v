@@ -38,7 +38,8 @@ module mips(
     wire D_beq, D_bne, D_bgtz, D_slt, D_sltu;
     wire D_jal, D_jr, D_load, D_store;
     wire D_set, D_md, D_mf, D_mt;
-    wire D_bezal; ////////////////////////////////////////////////////
+    wire D_newbal;
+    wire D_newload;
     
     
     // The wire ControllerE needs
@@ -58,7 +59,8 @@ module mips(
     wire E_calc_r, E_calc_i, E_load, E_lui;
     wire E_md;
     wire E_mf;
-    wire E_bezal; ////////////////////////////////////////////////////
+    wire E_newbal;
+    wire E_newload;
     
     
     // The wire ControllerM needs
@@ -75,7 +77,8 @@ module mips(
     wire M_load;
     wire [3:0] M_SControl;
     wire [3:0] M_LControl;
-    wire M_bezal; ////////////////////////////////////////////////////
+    wire M_newbal;
+    wire M_newload;
                     
                     
     // The wire ControllerW needs
@@ -88,7 +91,8 @@ module mips(
     wire [2:0] W_Mem2Reg;
     wire [4:0] W_RegAddr1;
     wire [4:0] W_RegAddr;
-    wire W_bezal; ////////////////////////////////////////////////////
+    wire W_newbal;
+    wire W_newload;
     
     
     // The wire NPC needs
@@ -223,7 +227,6 @@ module mips(
     .beq(D_beq),
     .bne(D_bne),
     .bgtz(D_bgtz),
-    .bezal(D_bezal),
     .jal(D_jal),
     .jr(D_jr),
     .slt(D_slt),
@@ -233,7 +236,9 @@ module mips(
     .set(D_set),
     .md(D_md),
     .mf(D_mf),
-    .mt(D_mt)
+    .mt(D_mt),
+    .newbal(D_newbal),
+    .newload(D_newload)
     );
     
     
@@ -253,17 +258,19 @@ module mips(
     .check(D_flag)
     );
     
-    assign D_check = D_flag & D_bezal;
-    assign Nullify = ~D_flag & D_bezal;
+    // todo branch
+    assign D_check = D_flag & D_newbal;
+    assign Nullify = ~D_flag & D_newbal;
     
     NPC MyNPC (
     .Zero(Zero), 
     .GZ(GZ), 
+    .LZ(LZ), 
     .check(D_flag),
     .beq(D_beq), 
     .bne(D_bne), 
     .bgtz(D_bgtz), 
-    .bezal(D_bezal),
+    .newbal(D_newbal),
     .jal(D_jal), 
     .jr(D_jr), 
     .F_PC(F_PC), 
@@ -331,16 +338,18 @@ module mips(
     .ALUSrc(E_ALUSrc), 
     .RegWrite(E_RegWrite),  
     .RegAddr(E_RegAddr1), 
-    .bezal(E_bezal),
     .calc_r(E_calc_r), 
     .calc_i(E_calc_i), 
     .load(E_load), 
     .lui(E_lui),
     .md(E_md),
-    .mf(E_mf)
+    .mf(E_mf),
+    .newbal(E_newbal),
+    .newload(E_newload)
     );
     
-    assign E_RegAddr = (E_bezal) ? (E_check ? 5'b11111 : 5'b0) : E_RegAddr1;
+    // todo branch
+    assign E_RegAddr = (E_newbal) ? (E_check ? 5'b11111 : 5'b0) : E_RegAddr1;
     
     MDU MyMDU (
     .clk(clk), 
@@ -398,13 +407,18 @@ module mips(
     .MemWrite(M_MemWrite),
     .Mem2Reg(M_Mem2Reg),
     .RegAddr(M_RegAddr1),
-    .bezal(M_bezal),
     .load(M_load),
     .SControl(M_SControl),
-    .LControl(M_LControl)
+    .LControl(M_LControl),
+    .newbal(M_newbal),
+    .newload(M_newload)
     );
     
-    assign M_RegAddr = (M_bezal) ? (M_check ? 5'b11111 : 5'b0) : M_RegAddr1;
+    // todo branch
+    // todo load
+    assign M_RegAddr = (M_newbal) ? (M_check ? 5'b11111 : 5'b0) : 
+                       (M_newload) ? (M_MemReadData[31:27] >= M_RegAddr1 ? M_MemReadData[31:27] : M_RegAddr1) : 
+                       M_RegAddr1;
     
     W_REG MyW_REG (
     .clk(clk), 
@@ -438,15 +452,20 @@ module mips(
     .RegWrite(W_RegWrite), 
     .Mem2Reg(W_Mem2Reg), 
     .RegAddr(W_RegAddr1),
-    .bezal(W_bezal)
+    .newbal(W_newbal),
+    .newload(W_newload)
     );
     
-    assign W_RegAddr = (W_bezal) ? (W_check ? 5'b11111 : 5'b0) : W_RegAddr1;
+    // todo branch
+    assign W_RegAddr = (W_newbal) ? (W_check ? 5'b11111 : 5'b0) : 
+                       (W_newload) ? (W_MemReadData[31:27] >= W_RegAddr1 ? W_MemReadData[31:27] : W_RegAddr1) : 
+                       W_RegAddr1;
     
-    assign Tuse_RS = (D_beq | D_jr | D_bgtz | D_bne | D_bezal) ? 2'b00 : 
+    // todo branch
+    assign Tuse_RS = (D_beq | D_jr | D_bgtz | D_bne | D_newbal) ? 2'b00 : 
                      (D_calc_r | D_calc_i | D_load | D_store | D_md | D_mt) ? 2'b01 : 
                      2'b11;
-    assign Tuse_RT = (D_beq | D_bgtz | D_bne | D_bezal | D_slt | D_sltu) ? 2'b00 : 
+    assign Tuse_RT = (D_beq | D_bgtz | D_bne | D_newbal | D_slt | D_sltu) ? 2'b00 : 
                      (D_calc_r | D_md) ? 2'b01 : 
                      (D_store) ? 2'b10 : 
                      2'b11;
@@ -455,14 +474,17 @@ module mips(
     assign E_Tnew = (E_calc_r | E_calc_i | E_lui | E_mf) ? 2'b01:
                     (E_load) ? 2'b10:
                     2'b00;
- 
+
     assign M_Tnew = M_load ? 2'b01: 2'b00;
     
-    
+    // todo load
+    // assign Stall_RS_E = (Tuse_RS < E_Tnew) & (E_newload ? (D_rs == E_RegAddr | D_rs == 5'b11111) : D_rs == E_RegAddr) & (D_rs != 5'b0) & (E_RegWrite);
     assign Stall_RS_E = (Tuse_RS < E_Tnew) & (D_rs == E_RegAddr) & (D_rs != 5'b0) & (E_RegWrite);
     assign Stall_RS_M = (Tuse_RS < M_Tnew) & (D_rs == M_RegAddr) & (D_rs != 5'b0) & (M_RegWrite);
     assign Stall_RS = Stall_RS_E | Stall_RS_M;
     
+    // todo load
+    // assign Stall_RT_E = (Tuse_RT < E_Tnew) & (E_newload ? (D_rt == E_RegAddr | D_rt == 5'b11111) : D_rt == E_RegAddr) & (D_rt != 5'b0) & (E_RegWrite);
     assign Stall_RT_E = (Tuse_RT < E_Tnew) & (D_rt == E_RegAddr) & (D_rt != 5'b0) & (E_RegWrite);
     assign Stall_RT_M = (Tuse_RT < M_Tnew) & (D_rt == M_RegAddr) & (D_rt != 5'b0) & (M_RegWrite);
     assign Stall_RT = Stall_RT_E | Stall_RT_M;
@@ -522,14 +544,14 @@ module mips(
     assign ALUSrcB = (E_ALUSrc) ? E_EXTResult : E_MFRT;
     
     
-    assign F_Instr = i_inst_rdata; //
-    assign i_inst_addr = F_PC; //
-    assign m_data_addr = M_ALUResult; //
-    assign m_inst_addr = M_PC; //
-    assign w_grf_we = W_RegWrite; //
-    assign w_grf_addr = W_RegAddr; //
-    assign w_grf_wdata = W_Src; //
-    assign w_inst_addr = W_PC; //
+    assign F_Instr = i_inst_rdata;
+    assign i_inst_addr = F_PC;
+    assign m_data_addr = M_ALUResult;
+    assign m_inst_addr = M_PC;
+    assign w_grf_we = W_RegWrite;
+    assign w_grf_addr = W_RegAddr;
+    assign w_grf_wdata = W_Src;
+    assign w_inst_addr = W_PC;
     
     assign m_data_wdata = (M_SControl == `WORD) ? M_MFRT :
                           (M_SControl == `HALF & M_ALUResult[1]) ? {M_MFRT[15: 0], 16'b0} :
@@ -538,7 +560,7 @@ module mips(
                           (M_SControl == `BYTE & M_ALUResult[1:0] == 2'b10) ? {8'b0, M_MFRT[7:0], 16'b0} :
                           (M_SControl == `BYTE & M_ALUResult[1:0] == 2'b01) ? {16'b0, M_MFRT[7:0], 8'b0} :
                           (M_SControl == `BYTE & M_ALUResult[1:0] == 2'b00) ? {24'b0, M_MFRT[7:0]} :
-                          32'b0; //
+                          32'b0;
     assign m_data_byteen = (M_SControl == `WORD) ? 4'b1111 :
                            (M_SControl == `HALF & m_data_addr[1]) ? 4'b1100 : 
                            (M_SControl == `HALF & ~m_data_addr[1]) ? 4'b0011 :
@@ -546,13 +568,13 @@ module mips(
                            (M_SControl == `BYTE & m_data_addr[1: 0] == 2) ? 4'b0100 :
                            (M_SControl == `BYTE & m_data_addr[1: 0] == 1) ? 4'b0010 :
                            (M_SControl == `BYTE & m_data_addr[1: 0] == 0) ? 4'b0001 :
-                           32'b0; //
+                           32'b0;
     
-    assign M_Half = m_data_rdata[m_data_addr[1] * 16 + 15 -: 16]; //
-    assign M_Byte = m_data_rdata[m_data_addr[1: 0] * 8 + 7 -: 8]; //
+    assign M_Half = m_data_rdata[m_data_addr[1] * 16 + 15 -: 16];
+    assign M_Byte = m_data_rdata[m_data_addr[1: 0] * 8 + 7 -: 8];
     assign M_MemReadData = (M_LControl == `WORD) ?  m_data_rdata :
                            (M_LControl == `HALF) ? {{16{M_Half[15]}}, M_Half} :
                            (M_LControl == `BYTE) ? {{24{M_Byte[7]}}, M_Byte} :
-                           0; //
+                           0;
 
 endmodule

@@ -43,13 +43,13 @@ module MDU(
     assign mflo  = (MDUControl == `MFLO);
     assign mthi  = (MDUControl == `MTHI);
     assign mtlo  = (MDUControl == `MTLO);
-    // todo
+    // todo mdu
     assign madd  = (MDUControl == `MADD);
     assign maddu = (MDUControl == `MADDU);
     assign msub  = (MDUControl == `MSUB);
     assign msubu = (MDUControl == `MSUBU);
     
-    // todo
+    // todo mdu
     assign Start = mult | multu | div | divu | madd | maddu | msub | msubu;
     /* assign MDUReadData = (mfhi) ? HI : 
                          (mflo) ? LO : 
@@ -95,7 +95,7 @@ module MDU(
                     LO <= SrcA;
 					count <= 4'd0;
                 end
-                // todo
+                // todo mdu
                 `MADD: begin
                     Busy <= 1'b1;
                     count <= 4'd5;

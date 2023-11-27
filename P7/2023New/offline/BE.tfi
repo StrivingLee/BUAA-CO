@@ -1,0 +1,17 @@
+
+
+
+// Instantiate the module
+BE instance_name (
+    .MemWrite(MemWrite), 
+    .Addr(Addr), 
+    .BEControl(BEControl), 
+    .RTData(RTData), 
+    .M_EXC_DM_Ov(M_EXC_DM_Ov), 
+    .store(store), 
+    .m_data_byteen(m_data_byteen), 
+    .m_data_wdata(m_data_wdata), 
+    .M_EXC_AdES(M_EXC_AdES)
+    );
+
+
