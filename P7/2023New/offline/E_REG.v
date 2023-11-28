@@ -43,9 +43,10 @@ module E_REG(
     always @(posedge clk) begin
         if (reset | flush | Req) begin
             E_Instr     <= 32'b0;
-            E_PC        <= (flush) ? D_PC :
+            E_PC        <= (reset) ? 32'h0000_3000 :
                            (Req) ? 32'h0000_4180 : 
-                           32'h0000_3000; // reset
+                           (flush) ? D_PC :
+                           32'h0000_3000; // priority!!!!
             E_WD1       <= 32'b0;
             E_WD2       <= 32'b0;
             E_EXTResult <= 32'b0;

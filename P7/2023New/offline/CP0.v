@@ -18,13 +18,16 @@ module CP0(
     input [5 :0] HWInt,     // 输入中断信号
     input        EXLClr,    // 用来复位 EXL
 	
+    
 	output [31:0] CP0Out,
     output [31:0] EPCOut,
     output        Req,      // 进入处理程序请求
     output        IntResponse
     );
 
+    // wire [31:0] temp_EPC = (Req) ? (BDIn ? (VPC-32'd4) : VPC) : EPC;
     reg [31:0] SR, Cause, EPC;
+    // assign EPCOut = temp_EPC;
     assign EPCOut = EPC;
 
     initial begin
@@ -36,6 +39,8 @@ module CP0(
     wire IntReq = `IE & !`EXL & (|(HWInt & `IM)); // 中断使能开，不在中断中，允许当前中断
     wire ExcReq = (|ExcCodeIn) & !`EXL; // 存在异常，且不在中断中
     assign Req = IntReq | ExcReq;
+    
+    assign IntResponse = !`EXL & `IE & (HWInt[2] & SR[12]);
 
     always@(posedge clk) begin
         if (reset) begin
@@ -48,6 +53,7 @@ module CP0(
             if (EXLClr) `EXL <= 1'b0;
             if (Req) begin
                 EPC <= (BDIn) ? VPC-32'd4 : VPC;
+                // EPC <= temp_EPC;
                 `BD <= BDIn; // update BD
                 `ExcCode <= (IntReq) ? 5'b0 : ExcCodeIn; // interrupt > exception
                 `EXL <= 1'b1; // set EXL
@@ -68,6 +74,5 @@ module CP0(
                     ((CP0Add == 5'd13) & (!en)) ? Cause :
                     ((CP0Add == 5'd14) & (!en)) ? EPC :
                     32'b0; // todo copy check
-    assign IntResponse = !`EXL & `IE & (HWInt[2] & SR[12]); // todo copy check
 
 endmodule

@@ -54,8 +54,8 @@ module mips(
     wire     [31:0] cpu_m_data_wdata;
     wire     [3 :0] cpu_m_data_byteen;
 
-    wire     [31:0] bridge_m_data_addr;
-    wire     [3 :0] bridge_m_data_byteen;
+    // wire     [31:0] bridge_m_data_addr;
+    // wire     [3 :0] bridge_m_data_byteen;
 
     mips_cpu MyCPU (
         .clk(clk), 
@@ -83,15 +83,17 @@ module mips(
     );
 
     // assign m_data_addr = (interrupt & IntResponse) ? 32'h0000_7f20 : bridge_m_data_addr;
-    assign m_data_addr = bridge_m_data_addr;
+    // assign m_data_addr = bridge_m_data_addr;
     // assign m_data_byteen = (interrupt & IntResponse) ? 4'b1 : bridge_m_data_byteen;
-    assign m_data_byteen = bridge_m_data_byteen;
+    // assign m_data_byteen = bridge_m_data_byteen;
 
 
     Bridge MyBridge(
-        .m_data_addr(bridge_m_data_addr),
+        // .m_data_addr(bridge_m_data_addr),
+        .m_data_addr(m_data_addr),
         .m_data_wdata(m_data_wdata),
-        .m_data_byteen(bridge_m_data_byteen),
+        // .m_data_byteen(bridge_m_data_byteen),
+        .m_data_byteen(m_data_byteen),
         .m_data_rdata(m_data_rdata),
 
         .cpu_m_data_addr(cpu_m_data_addr),

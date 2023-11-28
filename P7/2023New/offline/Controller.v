@@ -141,20 +141,21 @@ module Controller(
     
     assign MemWrite = store; // sb | sh | sw;
     // todo branch
-    assign RegWrite = calc_r | calc_i | load | lui | md | mf | mt | set | link;
-    assign Mem2Reg = (load) ? `DM :
+    assign RegWrite = calc_r | calc_i | load | lui | md | mf | mfc0 | set | link;
+    assign Mem2Reg = (load) ? `DM  :
                      (lui)  ? `EXT :
                      // todo branch
-                     (link) ? `PC :
-                     (mfhi) ? `HI :
-                     (mflo) ? `LO :
+                     (link) ? `PC  :
+                     (mfhi) ? `HI  :
+                     (mflo) ? `LO  :
+                     (mfc0) ? `CP0 :
                      `ALU;
     assign EXTControl = (load | store | addi) ? `SIGN :
                         (lui) ? `UPPER :
                         `ZERO;
     assign ALUSrc = (calc_r | md) ? 1'b0 : 1'b1;
     assign RegAddr = (calc_r | mf | jalr) ? rd :
-                     (calc_i | sltu | load | lui) ? rt : 
+                     (calc_i | sltu | load | lui | mfc0) ? rt : // mfc0 is rt    mfc0 rt, rd  GPR[rt] <- CP0[rd]
                      // todo branch
                      (jal | newbal) ? 5'b11111 :
                      5'b0;

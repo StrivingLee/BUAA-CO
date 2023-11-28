@@ -20,12 +20,12 @@ module Bridge(
         output [3 :0] m_int_byteen,
         
         output [31:0] TC0_Addr,
-        output TC0_WE,
+        output        TC0_WE,
         output [31:0] TC0_Din,
         input  [31:0] TC0_Dout,
         
         output [31:0] TC1_Addr,
-        output TC1_WE,
+        output        TC1_WE,
         output [31:0] TC1_Din,
         input  [31:0] TC1_Dout
     );

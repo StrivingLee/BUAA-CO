@@ -9,7 +9,6 @@ module MDU(
     input        clk,
     input        reset,
     input        Req,
-    input        Start,
 
     input [3 :0] MDUControl,
     input [31:0] SrcA,
@@ -24,25 +23,7 @@ module MDU(
     // reg [31:0] HI, LO;
     reg [31:0] temp_hi, temp_lo;
     reg [3 :0] count;
-    
-    assign mult  = (MDUControl == `MULT);
-    assign multu = (MDUControl == `MULTU);
-    assign div   = (MDUControl == `DIV);
-    assign divu  = (MDUControl == `DIVU);
-    assign mfhi  = (MDUControl == `MFHI);
-    assign mflo  = (MDUControl == `MFLO);
-    assign mthi  = (MDUControl == `MTHI);
-    assign mtlo  = (MDUControl == `MTLO);
-    // todo mdu
-    assign madd  = (MDUControl == `MADD);
-    assign maddu = (MDUControl == `MADDU);
-    assign msub  = (MDUControl == `MSUB);
-    assign msubu = (MDUControl == `MSUBU);
-    
-    // todo mdu
-    assign Start = mult | multu | div | divu | madd | maddu | msub | msubu;
-                        
-                        
+
     always @(posedge clk) begin
         if (reset) begin
             count <= 4'b0;

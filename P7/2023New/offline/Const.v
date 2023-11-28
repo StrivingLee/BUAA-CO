@@ -21,6 +21,7 @@
 `define PC    3'b011
 `define HI    3'b100
 `define LO    3'b101
+`define CP0   3'b110
 
 /* Extend types, used for EXTControl */
 `define ZERO  3'b000
@@ -96,5 +97,3 @@ parameter LW = 4'd1, LH = 4'd2, LB = 4'd3; */
 
 // ALU.v
 // parameter ADD = 3'b000, SUB = 3'b001, AND = 3'b010, OR = 3'b011, XOR = 3'b100, SLL = 3'b101, SLT = 3'b110, SLTU = 3'b111;
-
-// MDU.v

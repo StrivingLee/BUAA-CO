@@ -183,8 +183,8 @@ module mips_cpu(
     wire        M_MemWrite;
     wire        M_store;
     wire        M_load;
-    wire [3 :0] M_BEControl;
-    wire [3 :0] M_DEControl;
+    wire [2 :0] M_BEControl;
+    wire [2 :0] M_DEControl;
     wire        M_newbal;
     wire        M_newload;
     wire        M_mfc0;
@@ -274,6 +274,7 @@ module mips_cpu(
 
 /* ============================== F ends ============================== */
 
+/* ============================== FD REG begins ============================== */
     
     D_REG MyD_REG (
         .clk(clk), 
@@ -293,8 +294,10 @@ module mips_cpu(
         .D_EXC_Code(temp_D_EXC_Code)
     );
     
+/* ============================== FD REG ends ============================== */
 
 /* ============================== D begins ============================== */
+
     Controller ControllerD (
         .Instr(D_Instr), 
         
@@ -355,6 +358,9 @@ module mips_cpu(
     NPC MyNPC (
         .Req(Req),
         .eret(D_eret),
+        .EPC(EPC), 
+
+
         .Zero(Zero), 
         .GZ(GZ), 
         .LZ(LZ), 
@@ -365,7 +371,6 @@ module mips_cpu(
         .newbal(D_newbal),
         .jal(D_jal), 
         .jr(D_jr), 
-        .EPC(EPC), 
         .F_PC(F_PC), 
         .D_PC(D_PC), 
         .Imm26(D_Imm26), 
@@ -406,7 +411,8 @@ module mips_cpu(
                         `EXC_None;
 
 /* ============================== D ends ============================== */
-    
+
+/* ============================== DE REG begins ============================== */
     
     E_REG MyE_REG (
         .clk(clk), 
@@ -433,7 +439,8 @@ module mips_cpu(
         .E_EXC_Code(temp_E_EXC_Code),
         .E_check(E_check)
     );
-    
+
+/* ============================== DE REG ends ============================== */
 
 /* ============================== E begins ============================== */
 
@@ -446,6 +453,8 @@ module mips_cpu(
         .shamt(E_shamt), 
         .Mem2Reg(E_Mem2Reg),
         .ALUControl(E_ALUControl), 
+        .ALU_CAL_Ov(E_ALU_CAL_Ov),
+        .ALU_DM_Ov(E_ALU_DM_Ov),
         .MDUControl(E_MDUControl),
         .ALUSrc(E_ALUSrc), 
         .RegWrite(E_RegWrite),  
@@ -468,7 +477,6 @@ module mips_cpu(
     MDU MyMDU (
         .clk(clk), 
         .reset(reset), 
-        .Start(E_Start), 
         .Req(Req),
         
         .MDUControl(E_MDUControl),
@@ -479,7 +487,6 @@ module mips_cpu(
         .HI(E_HI),
         .LO(E_LO)
     );
-    
     
     ALU MyALU (
         .ALU_CAL_Ov(E_ALU_CAL_Ov),
@@ -501,7 +508,9 @@ module mips_cpu(
 
 /* ============================== E ends ============================== */
 
-    
+
+/* ============================== EM REG begins ============================== */
+
     M_REG MyM_REG (
         .clk(clk), 
         .reset(reset), 
@@ -532,6 +541,7 @@ module mips_cpu(
         .M_check(M_check)
     );
     
+/* ============================== EM REG ends ============================== */
 
 /* ============================== M begins ============================== */
 
@@ -552,6 +562,7 @@ module mips_cpu(
         .newbal(M_newbal),
         .newload(M_newload),
         .mfc0(M_mfc0),
+        .mtc0(M_mtc0),
         .eret(M_eret)
     );
 
@@ -735,11 +746,12 @@ module mips_cpu(
                    (M_Mem2Reg == `LO) ? M_LO : 
                    32'h0000_0000;
     assign W_Src = (W_Mem2Reg == `ALU) ? W_ALUResult : 
-                   (W_Mem2Reg == `DM) ? W_MemReadData : 
+                   (W_Mem2Reg == `DM ) ? W_MemReadData : 
                    (W_Mem2Reg == `EXT) ? W_EXTResult : 
-                   (W_Mem2Reg == `PC) ? W_PC + 8 : 
-                   (W_Mem2Reg == `HI) ? W_HI : 
-                   (W_Mem2Reg == `LO) ? W_LO : 
+                   (W_Mem2Reg == `PC ) ? W_PC + 8 : 
+                   (W_Mem2Reg == `HI ) ? W_HI : 
+                   (W_Mem2Reg == `LO ) ? W_LO : 
+                   (W_Mem2Reg == `CP0) ? W_CP0Result : 
                    32'h0000_0000;
     
     assign D_MFRS = (D_rs == 5'b0) ? 32'b0 : 

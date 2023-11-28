@@ -8,43 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Programing/ComputerOrganization/P5/P5_load/ALU.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Programing/ComputerOrganization/P5/P5_load/CMP.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Programing/ComputerOrganization/P5/P5_load/Controller.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Programing/ComputerOrganization/P5/P5_load/DM.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Programing/ComputerOrganization/P5/P5_load/D_REG.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Programing/ComputerOrganization/P5/P5_load/EXT.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Programing/ComputerOrganization/P5/P5_load/E_REG.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Programing/ComputerOrganization/P5/P5_load/GRF.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Programing/ComputerOrganization/P5/P5_load/IFU.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Programing/ComputerOrganization/P5/P5_load/M_REG.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Programing/ComputerOrganization/P5/P5_load/NPC.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Programing/ComputerOrganization/P5/P5_load/W_REG.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Programing/ComputerOrganization/P5/P5_load/mips.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Programing/BUAA-CO/P5/2022/P5_load/Controller.v&quot; into library work</arg>
 </msg>
 
 </messages>

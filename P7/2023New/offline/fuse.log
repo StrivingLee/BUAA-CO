@@ -22,18 +22,14 @@ Analyzing Verilog file "D:/Programing/BUAA-CO/P7/2023New/offline/P7_standard_tim
 Analyzing Verilog file "D:/Programing/BUAA-CO/P7/2023New/offline/mips_cpu.v" into library work
 Analyzing Verilog file "D:/Programing/BUAA-CO/P7/2023New/offline/Bridge.v" into library work
 Analyzing Verilog file "D:/Programing/BUAA-CO/P7/2023New/offline/mips.v" into library work
-Analyzing Verilog file "D:/Programing/BUAA-CO/P7/2023New/offline/tb_norm_demo.v" into library work
+Analyzing Verilog file "D:/Programing/BUAA-CO/P7/2023New/offline/tb_interrupt_demo.v" into library work
 Analyzing Verilog file "C:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P7/2023New/offline/mips_cpu.v" Line 292: Port shamt is not connected to this instance
-WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P7/2023New/offline/mips_cpu.v" Line 329: Port slt is not connected to this instance
-WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P7/2023New/offline/mips_cpu.v" Line 431: Port Imm16 is not connected to this instance
-WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P7/2023New/offline/mips_cpu.v" Line 528: Port shamt is not connected to this instance
-WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P7/2023New/offline/mips_cpu.v" Line 649: Port shamt is not connected to this instance
-WARNING:HDLCompiler:189 - "D:/Programing/BUAA-CO/P7/2023New/offline/mips_cpu.v" Line 540: Size mismatch in connection of port <BEControl>. Formal port size is 3-bit while actual signal size is 4-bit.
-WARNING:HDLCompiler:189 - "D:/Programing/BUAA-CO/P7/2023New/offline/mips_cpu.v" Line 541: Size mismatch in connection of port <DEControl>. Formal port size is 3-bit while actual signal size is 4-bit.
-WARNING:HDLCompiler:189 - "D:/Programing/BUAA-CO/P7/2023New/offline/mips_cpu.v" Line 552: Size mismatch in connection of port <BEControl>. Formal port size is 3-bit while actual signal size is 4-bit.
-WARNING:HDLCompiler:189 - "D:/Programing/BUAA-CO/P7/2023New/offline/mips_cpu.v" Line 569: Size mismatch in connection of port <DEControl>. Formal port size is 3-bit while actual signal size is 4-bit.
+WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P7/2023New/offline/mips_cpu.v" Line 301: Port shamt is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P7/2023New/offline/mips_cpu.v" Line 338: Port slt is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P7/2023New/offline/mips_cpu.v" Line 447: Port Imm16 is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P7/2023New/offline/mips_cpu.v" Line 548: Port shamt is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:/Programing/BUAA-CO/P7/2023New/offline/mips_cpu.v" Line 670: Port shamt is not connected to this instance
 Completed static elaboration
 Compiling module IFU
 Compiling module D_REG
@@ -59,5 +55,5 @@ Compiling module glbl
 Time Resolution for simulation is 1ps.
 Compiled 21 Verilog Units
 Built simulation executable D:/Programing/BUAA-CO/P7/2023New/offline/mips_txt_isim_beh.exe
-Fuse Memory Usage: 33088 KB
+Fuse Memory Usage: 32376 KB
 Fuse CPU Usage: 593 ms
