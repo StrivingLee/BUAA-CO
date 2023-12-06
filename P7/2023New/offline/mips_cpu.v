@@ -200,6 +200,10 @@ module mips_cpu(
 
     // The wire CP0 needs
     wire [31:0] M_CP0Result;
+    // todo privilege
+    wire        EXL;
+    wire        CU0;
+    wire        M_EXC_RI;
     
     
     // The wire W_REG needs
@@ -616,7 +620,9 @@ module mips_cpu(
 
         .EPCOut(EPC),
         .Req(Req),
-        .IntResponse(IntResponse)
+        .IntResponse(IntResponse),
+        .EXL(EXL),
+        .CU0(CU0)
     );
     
     assign macroscopic_pc = M_PC;
@@ -627,9 +633,14 @@ module mips_cpu(
                        (M_newload) ? (M_MemReadData[31:27] >= M_RegAddr1 ? M_MemReadData[31:27] : M_RegAddr1) : 
                        M_RegAddr1;
 
+    // todo privilege
+    assign M_EXC_RI = (M_mfc0 | M_mtc0) & !EXL & !CU0;
+
     assign M_EXC_Code = (temp_M_EXC_Code) ? temp_M_EXC_Code :
                         (M_EXC_AdES) ? `EXC_AdES :
                         (M_EXC_AdEL) ? `EXC_AdEL :
+                        // todo privilege
+                        (M_EXC_RI)   ? `EXC_RI :
                         `EXC_None;
 
     assign m_data_addr = M_ALUResult; // todo

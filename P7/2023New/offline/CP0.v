@@ -22,8 +22,15 @@ module CP0(
 	output [31:0] CP0Out,
     output [31:0] EPCOut,
     output        Req,      // 进入处理程序请求
-    output        IntResponse
+    output        IntResponse,
+    // todo privilege
+    output        EXL,
+    output        CU0
     );
+
+    // todo privilege
+    assign EXL = `EXL;
+    assign CU0 = `CU0;
 
     // wire [31:0] temp_EPC = (Req) ? (BDIn ? (VPC-32'd4) : VPC) : EPC;
     reg [31:0] SR, Cause, EPC;
@@ -44,6 +51,7 @@ module CP0(
 
     always@(posedge clk) begin
         if (reset) begin
+            // todo privilege, change SR init value
             SR <= 32'b0;
             Cause <= 32'b0;
             EPC <= 32'b0;

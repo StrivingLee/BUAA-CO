@@ -66,6 +66,8 @@
 `define EXC_None 5'd0 
 
 /* CP0 wires */
+// todo privilege
+`define  CU0      SR[28]
 `define  IM       SR[15:10]    // Interrupt Mask
 `define  EXL      SR[1]        // Exception Level
 `define  IE       SR[0]        // Interrupt Enable
