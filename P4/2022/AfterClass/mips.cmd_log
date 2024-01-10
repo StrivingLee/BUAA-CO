@@ -1,4 +1,0 @@
-vhdtdtfi -lang verilog -prj P4 -o D:/Programing/ComputerOrganization/P4/mips.tfi -lib work D:/Programing/ComputerOrganization/P4//mips.v -module mips -template D:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
-xst -intstyle ise -ifn "D:/Programing/ComputerOrganization/P4/mips.xst" -ofn "D:/Programing/ComputerOrganization/P4/mips.syr" 
-xst -intstyle ise -ifn "D:/Programing/ComputerOrganization/P4/mips.xst" -ofn "D:/Programing/ComputerOrganization/P4/mips.syr" 
-xst -intstyle ise -ifn "D:/Programing/ComputerOrganization/P4/mips.xst" -ofn "D:/Programing/ComputerOrganization/P4/mips.syr" 
